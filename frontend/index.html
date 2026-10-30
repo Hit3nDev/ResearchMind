@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LitLens</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230E1111'/><circle cx='14' cy='14' r='6.5' fill='none' stroke='%23D9F45A' stroke-width='3'/><path d='M19 19l6 6' stroke='%23D9F45A' stroke-width='3' stroke-linecap='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="/" aria-label="LitLens home">
+        <span class="logo" aria-hidden="true"><svg viewBox="0 0 32 32" width="18" height="18"><circle cx="14" cy="14" r="7" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M19.5 19.5l6.5 6.5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg></span>
+        <span>LitLens</span>
+      </a>
+      <nav class="tabs" id="mainTabs">
+        <button data-view="research" class="active">Research</button>
+        <button data-view="projects">Library</button>
+      </nav>
+      <span class="status" id="llmBadge"><i></i><span>connecting</span></span>
+    </div>
+  </header>
+
+  <main>
+    <!-- RESEARCH -->
+    <section id="view-research" class="view active">
+      <div class="hero" id="hero">
+        <p class="kicker">Literature review, automated</p>
+        <h1>Ask a question.<br>Get the <mark>research</mark>.</h1>
+        <form id="askForm" class="ask">
+          <textarea id="question" rows="2" placeholder="e.g. Which deep learning models work best for crop disease detection?" aria-label="Research question"></textarea>
+          <div class="ask-row">
+            <label class="select-inline">Read
+              <select id="maxPapers"><option>5</option><option selected>8</option><option>12</option><option>15</option></select>
+              papers
+            </label>
+            <button class="btn-primary" type="submit" id="askBtn">Start research <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+        <div class="samples">
+          <span class="label">Try</span>
+          <div id="samples"></div>
+        </div>
+      </div>
+      <div id="progress"></div>
+      <div id="report"></div>
+    </section>
+
+    <!-- LIBRARY -->
+    <section id="view-projects" class="view">
+      <div class="page-head">
+        <p class="kicker">Saved work</p>
+        <h1>Your <mark>library</mark></h1>
+      </div>
+      <div id="projectList"></div>
+    </section>
+  </main>
+
+  <footer class="colophon">LitLens · searches arXiv &amp; Semantic Scholar · ranks with Boolean, TF-IDF &amp; BM25 · summarises, compares and cites</footer>
+  <div id="toast" class="toast" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

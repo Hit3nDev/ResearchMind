@@ -1,0 +1,12 @@
+[
+  {"question": "What are the latest machine learning techniques for crop disease detection?", "field": "Agriculture"},
+  {"question": "How are transformers used for machine translation of Indian languages?", "field": "NLP"},
+  {"question": "Which deep learning models work best for fake news detection?", "field": "NLP / Social media"},
+  {"question": "word sense disambiguation using neural networks", "field": "NLP"},
+  {"question": "Deep learning for diabetic retinopathy detection from fundus images", "field": "Medical imaging"},
+  {"question": "Sentiment analysis of code-mixed Hindi-English text", "field": "NLP"},
+  {"question": "Graph neural networks for traffic forecasting", "field": "Transportation"},
+  {"question": "Speech recognition for low-resource languages", "field": "Speech"},
+  {"question": "machin lerning for stok market predction", "field": "Finance (deliberate typos: tests spelling correction)"},
+  {"question": "quantum gravity in purple elephants", "field": "Nonsense (tests graceful empty state)"}
+]
